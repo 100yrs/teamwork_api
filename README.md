@@ -31,19 +31,9 @@ few endpoints available:
 client = TeamworkApi::Client.new('https://yoursite.teamwork.com')
 client.api_key = 'YOUR_API_KEY'
 
-# Topic endpoints
-client.latest_topics                            #=> Gets a list of the latest topics
-client.hot_topics                               #=> Gets a list of hot topics
-client.new_topics                               #=> Gets a list of new topics
-client.topics_by("sam")                         #=> Gets a list of topics created by user "sam"
-client.topic(57)                                #=> Gets the topic with id 57
-
-# Search endpoint
-client.search("sandbox")                        #=> Gets a list of topics that match "sandbox"
-
-# Categories endpoint
-client.categories                               #=> Gets a list of categories
-client.category_latest_topics(category_slug: "lounge")  #=> Gets a list of latest topics in a category
+# Project endpoints
+client.projects                                 #=> Gets all projects
+client.project(57)                              #=> Gets the project with id 57
 ```
 
 ## Development
