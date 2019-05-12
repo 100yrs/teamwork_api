@@ -1,0 +1,17 @@
+.bundle
+.yardoc
+_yardoc
+bin/
+coverage
+doc/
+pkg
+tmp
+
+# rspec failure tracking
+.rspec_status
+
+# rbenv
+.rbenv-gemsets
+.ruby-version
+
+.env
