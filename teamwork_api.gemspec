@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'teamwork_api/version'
@@ -23,8 +25,15 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rack', '>= 1.6'
 
   spec.add_development_dependency 'bundler', '~> 1.16'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'guard', '~> 2.14'
+
+
+  spec.add_development_dependency 'guard-rspec', '~> 4.7'
+  spec.add_development_dependency 'guard-rubocop', '~> 1.3.0'
+  spec.add_development_dependency 'rake', '~> 11.1'
   spec.add_development_dependency 'rspec', '~> 3.4'
-  spec.add_development_dependency 'rubocop', '~> 0.67.2'
+  spec.add_development_dependency 'rubocop', '~> 0.69.0'
+  spec.add_development_dependency 'rubocop-performance', '~> 1.3.0'
   spec.add_development_dependency 'simplecov', '~> 0.11'
+  spec.add_development_dependency 'webmock', '~> 2.0'
 end

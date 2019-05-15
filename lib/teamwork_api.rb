@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'teamwork_api/version'
 
 module TeamworkApi

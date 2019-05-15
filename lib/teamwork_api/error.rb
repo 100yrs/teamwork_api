@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TeamworkApi
   class TeamworkError < StandardError
     attr_reader :response
