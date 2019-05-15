@@ -1,7 +1,8 @@
 # TeamworkApi
 
-![TravisCI](https://travis-ci.org/100yrs/teamwork_api.svg?branch=master)
-
+[![Build](https://travis-ci.org/100yrs/teamwork_api.svg?branch=master)](https://travis-ci.org/100yrs/teamwork_api)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ad05d9af4c9a0d2cc4dd/maintainability)](https://codeclimate.com/github/100yrs/teamwork_api/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ad05d9af4c9a0d2cc4dd/test_coverage)](https://codeclimate.com/github/100yrs/teamwork_api/test_coverage)
 
 The Teamwork API gem allows you to consume the Teamwork API
 
