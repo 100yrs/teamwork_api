@@ -12,6 +12,7 @@ require 'teamwork_api/api/project_owner'
 require 'teamwork_api/api/task_lists'
 
 module TeamworkApi
+  # The main Teamwork client object
   class Client
     attr_accessor :api_key
     attr_reader :host
@@ -93,14 +94,10 @@ module TeamworkApi
     end
 
     def request(method, path, params = {})
-      unless Hash === params
-        params = params.to_h if params.respond_to? :to_h
-      end
-      path = @use_relative ? path.sub(/^\//, '') : path
-
       connection.headers[:cache_control] = 'no-cache'
       connection.basic_auth(api_key, '')
-      response = connection.send(method.to_sym, path, params)
+      response =
+        connection.send(method.to_sym, request_path(path), params_hash(params))
       handle_error(response)
       response.env
     rescue Faraday::Error::ClientError, JSON::ParserError
@@ -108,31 +105,36 @@ module TeamworkApi
     end
 
     def handle_error(response)
+      body = response.env[:body]
+      env = response.env
+
       case response.status
       when 403
-        raise TeamworkApi::UnauthenticatedError.new(
-          response.env[:body],
-          response.env
-        )
+        raise TeamworkApi::UnauthenticatedError.new(body, env)
       when 404, 410
-        raise TeamworkApi::NotFoundError.new(response.env[:body], response.env)
+        raise TeamworkApi::NotFoundError.new(body, env)
       when 422
-        raise TeamworkApi::UnprocessableEntity.new(
-          response.env[:body],
-          response.env
-        )
+        raise TeamworkApi::UnprocessableEntity.new(body, env)
       when 429
-        raise TeamworkApi::TooManyRequests.new(
-          response.env[:body],
-          response.env
-        )
+        raise TeamworkApi::TooManyRequests.new(body, env)
       when 500...600
-        raise TeamworkApi::Error.new(response.env[:body])
+        raise TeamworkApi::Error, body
       end
     end
 
     def check_subdirectory(host)
       URI(host).request_uri != '/'
+    end
+
+    def request_path(path)
+      @use_relative ? path.sub(%r{^\/}, '') : path
+    end
+
+    def params_hash(params)
+      unless params.is_a?(Hash)
+        params = params.to_h if params.respond_to? :to_h
+      end
+      params
     end
   end
 end

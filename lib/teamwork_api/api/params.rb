@@ -1,15 +1,18 @@
 # frozen_string_literal: true
 
 module TeamworkApi
+  # Make it easier to deal with params
   module API
     def self.params(args)
       Params.new(args)
     end
 
+    # The useful stuff is here
     class Params
       def initialize(args)
-        raise ArgumentError.new('Required to be initialized with a Hash') unless
+        raise(ArgumentError, 'Required to be initialized with a Hash') unless
           args.is_a? Hash
+
         @args = args
         @required = []
         @optional = []
@@ -38,8 +41,7 @@ module TeamworkApi
 
         @required.each do |k|
           h[k] = @args[k]
-          raise ArgumentError.new("#{k} is required but not specified") unless
-            h[k]
+          raise(ArgumentError, "#{k} is required but not specified") unless h[k]
         end
 
         @optional.each do |k|
@@ -47,20 +49,16 @@ module TeamworkApi
         end
 
         @defaults.each do |k, v|
-          @args.key?(k) ? h[k] = @args[k] : h[k] = v
+          h[k] = (@args.key?(k) ? @args[k] : v)
         end
 
         caseify_keys(h)
       end
 
-      def caseify_keys(h)
+      def caseify_keys(hash)
         caseified_hash = {}
-        h.each do |k, v|
-          if k =~ /-/
-            key = k.to_s
-          else
-            key = k.to_s.camelize(:lower)
-          end
+        hash.each do |k, v|
+          key = (k.match?(/-/) ? k.to_s : k.to_s.camelize(:lower))
           caseified_hash[key] = v
         end
 

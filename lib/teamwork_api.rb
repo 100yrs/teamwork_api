@@ -2,6 +2,7 @@
 
 require 'teamwork_api/version'
 
+# Base module
 module TeamworkApi
   require 'teamwork_api/api/params'
   require 'teamwork_api/client'

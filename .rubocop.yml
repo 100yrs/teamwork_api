@@ -6,5 +6,9 @@ Metrics/BlockLength:
   Exclude:
   - 'Rakefile'
   - 'spec/**/*.rb'
+Metrics/MethodLength:
+  Max: 15
 Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining
+Style/SymbolArray:
+  EnforcedStyle: brackets

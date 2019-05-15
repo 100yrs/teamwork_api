@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
+require 'English'
+
 module TeamworkApi
+  # baser error
   class TeamworkError < StandardError
     attr_reader :response
 
@@ -10,6 +13,7 @@ module TeamworkApi
     end
   end
 
+  # specific errors
   class Error < TeamworkError
     attr_reader :wrapped_exception
 
@@ -17,7 +21,7 @@ module TeamworkApi
     #
     # @param exception [Exception, String]
     # @return [TeamworkApi::Error]
-    def initialize(exception = $!)
+    def initialize(exception = $ERROR_INFO)
       @wrapped_exception = exception
       if exception.respond_to?(:message)
         super(exception.message)

@@ -2,6 +2,9 @@
 
 module TeamworkApi
   module API
+    # client methods for ProjectOwner. Note that there isn't a specific
+    # ProjectOwner endpoint and these happen via the project
+    # https://developer.teamwork.com/projects/project-owner
     module ProjectOwner
       def project_owner(project_id)
         response = get "projects/#{project_id}.json",
