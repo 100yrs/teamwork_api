@@ -2,7 +2,7 @@
 
 module TeamworkApi
   module API
-    # client methods for TaskLists
+    # Client methods for TaskLists
     # https://developer.teamwork.com/projects/task-lists
     module TaskLists
       def create_task_list(project_id, args)
@@ -21,7 +21,7 @@ module TeamworkApi
              ).to_h
 
         response = post "projects/#{project_id}/tasklists.json", tasklist: args
-        response['TASKLISTID']
+        response['TASKLISTID']&.to_i
       end
 
       # def update_task_list(task_list_id, args)
@@ -29,7 +29,7 @@ module TeamworkApi
 
       def task_list(task_list_id)
         response = get "/tasklists/#{task_list_id}.json"
-        response.body['tasklist']
+        response.body['todo-list']
       end
 
       def task_lists

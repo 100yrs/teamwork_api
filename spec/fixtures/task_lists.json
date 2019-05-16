@@ -1,0 +1,22 @@
+{
+  "STATUS": "OK",
+  "tasklists": [
+    {
+      "id": "1",
+      "name": "task list 1",
+      "description": "",
+      "position": 1,
+      "projectId": "1",
+      "projectName": "My testing project",
+      "updatedAfter": "2018-09-13T14:57:03Z",
+      "private": false,
+      "isTemplate": false,
+      "tags": [],
+      "milestone-id": "",
+      "pinned": false,
+      "complete": false,
+      "uncompleted-count": 17,
+      "status": "new"
+    }
+  ]
+}
