@@ -1,0 +1,68 @@
+{
+  "project": {
+    "replyByEmailEnabled": true,
+    "starred": false,
+    "show-announcement": false,
+    "harvest-timers-enabled": false,
+    "subStatus": "current",
+    "status": "active",
+    "defaultPrivacy": "open",
+    "integrations": {
+      "xero": {
+        "countrycode": "",
+        "enabled": false,
+        "connected": "NO",
+        "organisation": "",
+        "basecurrency": ""
+      },
+      "microsoftConnectors": {
+        "enabled": false
+      },
+      "onedrivebusiness": {
+        "enabled": false
+      }
+    },
+    "created-on": "2018-03-22T09:44:27Z",
+    "filesAutoNewVersion": false,
+    "category": {
+      "name": "",
+      "id": "",
+      "color": ""
+    },
+    "tags": [],
+    "overview-start-page": "activity",
+    "logo": "",
+    "startDate": "",
+    "id": "1",
+    "last-changed-on": "2018-07-25T08:56:54Z",
+    "type": "normal",
+    "endDate": "",
+    "company": {
+      "name": "Teamwork.com",
+      "id": "1"
+    },
+    "tasks-start-page": "list",
+    "active-pages": {
+      "links": "1",
+      "tasks": "1",
+      "time": "0",
+      "billing": "1",
+      "notebooks": "1",
+      "files": "1",
+      "comments": "1",
+      "riskRegister": "0",
+      "milestones": "1",
+      "messages": "1"
+    },
+    "name": "API Documentation",
+    "privacyEnabled": false,
+    "description": "",
+    "logoFromCompany": true,
+    "directFileUploadsEnabled": true,
+    "start-page": "tasks",
+    "skipWeekends": false,
+    "notifyeveryone": false,
+    "boardData": {}
+  },
+  "STATUS": "OK"
+}

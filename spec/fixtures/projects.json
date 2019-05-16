@@ -1,0 +1,135 @@
+{
+  "STATUS": "OK",
+  "projects": [
+    {
+      "startDate": "",
+      "last-changed-on": "2019-01-03T11:46:14Z",
+      "logo": "",
+      "created-on": "2018-12-12T10:04:47Z",
+      "privacyEnabled": false,
+      "status": "active",
+      "boardData": {},
+      "replyByEmailEnabled": true,
+      "harvest-timers-enabled": false,
+      "description": "",
+      "category": {
+        "color": "",
+        "id": "",
+        "name": ""
+      },
+      "id": "322852",
+      "overview-start-page": "default",
+      "start-page": "projectoverview",
+      "integrations": {
+        "xero": {
+          "basecurrency": "",
+          "countrycode": "",
+          "enabled": false,
+          "connected": "NO",
+          "organisation": ""
+        },
+        "sharepoint": {
+          "account": "",
+          "foldername": "root",
+          "enabled": false,
+          "folder": "root"
+        },
+        "microsoftConnectors": {
+          "enabled": false
+        },
+        "onedrivebusiness": {
+          "account": "",
+          "foldername": "root",
+          "enabled": false,
+          "folder": "root"
+        }
+      },
+      "defaults": {
+        "privacy": ""
+      },
+      "notifyeveryone": false,
+      "filesAutoNewVersion": false,
+      "defaultPrivacy": "open",
+      "tasks-start-page": "default",
+      "starred": false,
+      "announcementHTML": "",
+      "isProjectAdmin": true,
+      "name": "Project 2",
+      "company": {
+        "is-owner": "1",
+        "id": "78494",
+        "name": "MCG Company"
+      },
+      "endDate": "",
+      "announcement": "",
+      "show-announcement": false,
+      "subStatus": "current",
+      "tags": []
+    },
+    {
+      "startDate": "",
+      "last-changed-on": "2018-12-11T17:52:57Z",
+      "logo": "",
+      "created-on": "2018-11-26T11:11:00Z",
+      "privacyEnabled": false,
+      "status": "active",
+      "boardData": {},
+      "replyByEmailEnabled": true,
+      "harvest-timers-enabled": false,
+      "description": "",
+      "category": {
+        "color": "",
+        "id": "",
+        "name": ""
+      },
+      "id": "321041",
+      "overview-start-page": "default",
+      "start-page": "projectoverview",
+      "integrations": {
+        "xero": {
+          "basecurrency": "",
+          "countrycode": "",
+          "enabled": false,
+          "connected": "NO",
+          "organisation": ""
+        },
+        "sharepoint": {
+          "account": "",
+          "foldername": "root",
+          "enabled": false,
+          "folder": "root"
+        },
+        "microsoftConnectors": {
+          "enabled": false
+        },
+        "onedrivebusiness": {
+          "account": "",
+          "foldername": "root",
+          "enabled": false,
+          "folder": "root"
+        }
+      },
+      "defaults": {
+        "privacy": ""
+      },
+      "notifyeveryone": false,
+      "filesAutoNewVersion": false,
+      "defaultPrivacy": "open",
+      "tasks-start-page": "default",
+      "starred": false,
+      "announcementHTML": "",
+      "isProjectAdmin": true,
+      "name": "Project One",
+      "company": {
+        "is-owner": "1",
+        "id": "78494",
+        "name": "MCG Company"
+      },
+      "endDate": "",
+      "announcement": "",
+      "show-announcement": false,
+      "subStatus": "current",
+      "tags": []
+    }
+  ]
+}

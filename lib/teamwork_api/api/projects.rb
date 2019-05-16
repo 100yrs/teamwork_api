@@ -2,9 +2,30 @@
 
 module TeamworkApi
   module API
-    # client methods for Projects
+    # Client methods for Projects
     # https://developer.teamwork.com/projects/projects
     module Projects
+      OPTIONAL_GET_ATTRIBUTES = [
+        :status,
+        :updated_after_date,
+        :order_by,
+        :created_after_date,
+        :created_after_time,
+        :cat_id,
+        :include_people,
+        :include_project_owner,
+        :page,
+        :page_size,
+        :order_mode,
+        :only_starred_projects,
+        :company_id,
+        :project_owner_ids,
+        :search_term,
+        :get_deleted,
+        :include_tags,
+        :user_id,
+        :updated_after_date_time
+      ].freeze
       OPTIONAL_CREATE_ATTRIBUTES = [
         :description,
         :start_date,
@@ -50,24 +71,24 @@ module TeamworkApi
              .to_h
 
         response = post 'projects.json', project: args
-        response['id']
+        response['id']&.to_i
       end
 
       def update_project(project_id, args)
         args = API.params(args).optional(*OPTIONAL_UPDATE_ATTRIBUTES).to_h
 
-        response = put "projects/#{project_id}.json", project: args
-        response['id']
+        put "projects/#{project_id}.json", project: args
       end
 
       def project(project_id, args = {})
-        args = (args.present? ? { project: args } : {})
+        args = { project: args } unless args.empty?
         response = get "/projects/#{project_id}.json", args
         response.body['project']
       end
 
-      def projects
-        response = get '/projects.json'
+      def projects(args = {})
+        args = API.params(args).optional(*OPTIONAL_GET_ATTRIBUTES).to_h
+        response = get '/projects.json', args
         response.body['projects']
       end
 
