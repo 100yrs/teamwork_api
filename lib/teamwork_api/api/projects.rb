@@ -46,7 +46,7 @@ module TeamworkApi
           API.params(args)
              .required(:name)
              .default('category-id': '0')
-             .optional(OPTIONAL_CREATE_ATTRIBUTES)
+             .optional(*OPTIONAL_CREATE_ATTRIBUTES)
              .to_h
 
         response = post 'projects.json', project: args
@@ -54,7 +54,7 @@ module TeamworkApi
       end
 
       def update_project(project_id, args)
-        args = API.params(args).optional(OPTIONAL_UPDATE_ATTRIBUTES).to_h
+        args = API.params(args).optional(*OPTIONAL_UPDATE_ATTRIBUTES).to_h
 
         response = put "projects/#{project_id}.json", project: args
         response['id']
