@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/ad05d9af4c9a0d2cc4dd/maintainability)](https://codeclimate.com/github/100yrs/teamwork_api/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ad05d9af4c9a0d2cc4dd/test_coverage)](https://codeclimate.com/github/100yrs/teamwork_api/test_coverage)
 
-The Teamwork API gem allows you to consume the Teamwork API
+The Teamwork API gem allows you to consume the [Teamwork API](https://developer.teamwork.com/)
 
 ## Installation
 
@@ -44,7 +44,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/teamwork_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/100yrs/teamwork_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
