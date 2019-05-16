@@ -1,0 +1,91 @@
+{
+  "project": {
+    "replyByEmailEnabled": true,
+    "starred": false,
+    "show-announcement": false,
+    "harvest-timers-enabled": false,
+    "subStatus": "current",
+    "status": "active",
+    "integrations": {
+      "xero": {
+        "countrycode": "",
+        "enabled": false,
+        "connected": "NO",
+        "organisation": "",
+        "basecurrency": ""
+      },
+      "microsoftConnectors": {
+        "enabled": false
+      },
+      "onedrivebusiness": {
+        "enabled": false
+      }
+    },
+    "defaultPrivacy": "open",
+    "owner": {
+      "avatarUrl": "",
+      "firstName": "Holly",
+      "fullName": "Holly Bracken",
+      "id": "1",
+      "lastName": "Bracken"
+    },
+    "created-on": "2018-03-28T10:18:21Z",
+    "filesAutoNewVersion": false,
+    "category": {
+      "name": "",
+      "id": "",
+      "color": ""
+    },
+    "tags": [],
+    "overview-start-page": "default",
+    "logo": "9.png",
+    "startDate": "",
+    "id": "1",
+    "last-changed-on": "2018-07-20T15:18:54Z",
+    "type": "normal",
+    "endDate": "",
+    "company": {
+      "name": "Marketing Ltd.",
+      "id": "1"
+    },
+    "tasks-start-page": "default",
+    "active-pages": {
+      "links": "1",
+      "tasks": "1",
+      "time": "1",
+      "billing": "1",
+      "notebooks": "1",
+      "files": "1",
+      "comments": "1",
+      "riskRegister": "0",
+      "milestones": "1",
+      "messages": "1"
+    },
+    "name": "Holly's testing Project",
+    "privacyEnabled": false,
+    "description": "",
+    "announcement": "",
+    "logoFromCompany": true,
+    "directFileUploadsEnabled": true,
+    "start-page": "tasks",
+    "skipWeekends": false,
+    "notifyeveryone": false,
+    "boardData": {
+      "board": {
+        "name": "1",
+        "id": "1",
+        "color": "#BDC3C7"
+      },
+      "card": {
+        "id": "1"
+      },
+      "column": {
+        "name": "1",
+        "id": "1",
+        "color": "#8E44AD"
+      }
+    },
+    "announcementHTML": ""
+  },
+  "STATUS": "OK"
+}
