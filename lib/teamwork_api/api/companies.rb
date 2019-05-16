@@ -2,7 +2,7 @@
 
 module TeamworkApi
   module API
-    # client methods for Companies
+    # Client methods for Companies
     # https://developer.teamwork.com/projects/companies
     module Companies
       def company(company_id)

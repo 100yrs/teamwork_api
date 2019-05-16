@@ -1,0 +1,32 @@
+{
+  "company": {
+    "state": "California",
+    "email_one": "",
+    "email_three": "",
+    "contacts": "0",
+    "website": "https://www.company-one.com/",
+    "logo-URL": "https://s3.amazonaws.com/TWFiles/999/companyLogo/l.png",
+    "email_two": "",
+    "cid": "",
+    "phone": "",
+    "created-on": "",
+    "accounts": "15",
+    "company_name_url": "000-company-one",
+    "can_see_private": true,
+    "tags": [],
+    "zip": "90021",
+    "industryId": "",
+    "id": "999",
+    "last-changed-on": "2018-12-11T20:18:08Z",
+    "fax": "",
+    "address_two": "",
+    "name": "Company One",
+    "country": "United States",
+    "isowner": "1",
+    "industry": "",
+    "address_one": "1 First Avenue",
+    "countrycode": "US",
+    "collaborators": "2",
+    "city": "Los Angeles"
+  }
+}
