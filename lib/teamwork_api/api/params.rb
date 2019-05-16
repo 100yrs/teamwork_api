@@ -58,11 +58,18 @@ module TeamworkApi
       def caseify_keys(hash)
         caseified_hash = {}
         hash.each do |k, v|
-          key = (k.match?(/-/) ? k.to_s : k.to_s.camelize(:lower))
+          key = (k.match?(/-/) ? k.to_s : camelize(k.to_s))
           caseified_hash[key] = v
         end
 
         caseified_hash
+      end
+
+      def camelize(string)
+        string = string.sub(/^(?:(?=\b|[A-Z_])|\w)/) { $&.downcase }
+        string.gsub(%r{(?:_|(\/))([a-z\d]*)}) {
+          "#{Regexp.last_match(1)}#{Regexp.last_match(2).capitalize}"
+        }.gsub('/', '::')
       end
     end
   end
