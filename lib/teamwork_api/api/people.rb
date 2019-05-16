@@ -5,7 +5,16 @@ module TeamworkApi
     # client methods for People
     # https://developer.teamwork.com/projects/people
     module People
-      UPDATE_OPTIONAL_ATTRIBUTES = [
+      OPTIONAL_GET_ATTRIBUTES = [
+        :project_id,
+        :page,
+        :page_size,
+        :group_by_company,
+        :sort,
+        :sort_order,
+        :full_profile
+      ].freeze
+      OPTIONAL_UPDATE_ATTRIBUTES = [
         :'edit-all-tasks',
         :'view-messages-and-files',
         :'view-tasks-and-milestones',
@@ -31,6 +40,17 @@ module TeamworkApi
         :'add-people-to-project'
       ].freeze
 
+      def person(person_id)
+        response = get "/people/#{person_id}.json"
+        response.body['person']
+      end
+
+      def people(args = {})
+        args = API.params(args).optional(*OPTIONAL_GET_ATTRIBUTES).to_h
+        response = get '/people.json', args
+        response.body['people']
+      end
+
       def add_person_to_project(project_id, person_id)
         response =
           put "projects/#{project_id}/people.json",
@@ -39,8 +59,7 @@ module TeamworkApi
       end
 
       def set_permissions(project_id, person_id, args)
-        args = API.params(args).optional(UPDATE_OPTIONAL_ATTRIBUTES).to_h
-
+        args = API.params(args).optional(*OPTIONAL_UPDATE_ATTRIBUTES).to_h
         response =
           put "projects/#{project_id}/people/#{person_id}.json",
               permissions: args

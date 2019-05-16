@@ -1,0 +1,77 @@
+{
+  "STATUS": "OK",
+  "person": {
+    "marketoId": "0",
+    "permissions": {
+      "can-access-templates": false,
+      "can-add-projects": false,
+      "can-manage-people": false
+    },
+    "avatar-url": "",
+    "last-changed-on": "2018-08-09T14:21:19Z",
+    "email-address": "d2@demo1company.com",
+    "last-login": "",
+    "documentEditorInstalled": false,
+    "user-name": "d2@demo1company.com",
+    "id": "1",
+    "phone-number-fax": "",
+    "site-owner": false,
+    "company-name": "Company",
+    "user-invited-date": "",
+    "user-type": "collaborator",
+    "phone-number-mobile": "",
+    "openId": "",
+    "address": {
+      "city": "",
+      "country": "",
+      "countrycode": "",
+      "zipcode": "",
+      "state": "",
+      "line1": "",
+      "line2": ""
+    },
+    "phone-number-office": "",
+    "im-handle": "",
+    "twoFactorAuthEnabled": false,
+    "tags": [],
+    "has-access-to-new-projects": false,
+    "im-service": "",
+    "deleted": false,
+    "notes": "",
+    "in-owner-company": "1",
+    "profile": "",
+    "user-invited-status": "PENDING",
+    "userUUID": "",
+    "user-invited": "2",
+    "created-at": "2018-06-14T14:07:29Z",
+    "companyId": "1",
+    "has-desk-account": true,
+    "integrations": {
+      "microsoftConnector": {
+        "enabled": false
+      }
+    },
+    "phone-number-home": "",
+    "profile-text": "",
+    "private-notes-text": "",
+    "company-id": "1",
+    "pid": "",
+    "phone-number-mobile-parts": {
+      "countryCode": "",
+      "prefix": "",
+      "phone": ""
+    },
+    "login-count": "0",
+    "private-notes": "",
+    "email-alt-1": "",
+    "administrator": false,
+    "email-alt-2": "",
+    "email-alt-3": "",
+    "last-name": "User",
+    "title": "",
+    "first-name": "Demo 2",
+    "phone-number-office-ext": "",
+    "twitter": "",
+    "lengthOfDay": "8.0"
+  }
+}
