@@ -87,6 +87,10 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/100yrs
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+## Acknowledgements
+
+The structure and much of the helper code for this gem was borrowed from the [Discourse API](https://github.com/discourse/discourse_api) gem.
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
