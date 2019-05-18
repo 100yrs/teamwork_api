@@ -34,6 +34,41 @@ client.api_key = 'YOUR_API_KEY'
 # Project endpoints
 client.projects                                 #=> Gets all projects
 client.project(57)                              #=> Gets the project with id 57
+client.delete_project(57)                       #=> Deletes the project with id 57
+client.create_project(                          #=> Creates a new project
+  name: 'My Project'
+)
+client.update_project(                          #=> Updates project with id 57
+  57,
+  name: 'Renamed Project'
+)
+
+# Company endpoints
+client.companies                                #=> Gets all companies
+client.company(51)                              #=> Gets the company with id 51
+client.company_by_name('ABC Corp')              #=> Gets the company with name "ABC Corp"
+
+# People endpoints
+client.people                                   #=> Gets all people
+client.person(49)                               #=> Gets the person with id 49
+client.add_person_to_project(57, 49)            #=> Adds the person with id 49 to the project with id 57
+client.set_permissions(                         #=> Sets the person with id 49 as an administrator of the project with id 57
+  57,
+  49,
+  'project-administrator': true
+)
+
+# Project Owner endpoints
+client.project_owner(57)                        #=> Gets the owner details for the project with id 57
+
+# Task List endpoints
+client.task_lists                               #=> Gets all task lists
+client.task_list(45)                            #=> Gets the task list with id 45
+client.delete_task_list(45)                     #=> Deletes the task list with id 45
+client.create_task_list(                        #=> Creates a new task list for the project with id 57
+  57,
+  name: 'My list'
+)
 ```
 
 ## Development
